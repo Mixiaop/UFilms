@@ -1,0 +1,8 @@
+select * from mbj_movies
+select * from [dbo].[Mbj_Adults_Movies] order by creationtime desc
+select code from [Mbj_Adults_Movies] group by code having count(code)>1
+select * from [Mbj_Adults_Actors] where cnname='大桥未久'  order by hits desc
+
+SELECT m.code,m.year,m.movielength,m.cnname,m.hits,m.coverid FROM MBJ_ADULTS_movieActors ma left join mbj_adults_movies m on ma.movieid=m.id where ma.actorid=341 order by m.year desc
+
+insert into mbj_adults_spiderlinks(name,link,isjointask,source,remark) values('泽村玲子','http://www.nh87.cn/zecunlingzi/',0,'WwwNH87cn','个人主页')

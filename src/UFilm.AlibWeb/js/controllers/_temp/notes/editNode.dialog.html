@@ -1,0 +1,104 @@
+﻿<div class="modal fade" id="nodes_editNodeDialog" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-popin">
+        <div class="modal-content">
+            <div class="block block-themed block-transparent remove-margin-b">
+                <div class="block-header bg-primary-dark">
+                    <ul class="block-options">
+                        <li>
+                            <button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
+                        </li>
+                    </ul>
+                    <h3 class="block-title"><i class="fa fa-plus"></i>编辑 1 级权限</h3>
+                </div>
+                <div class="block-content">
+                    <div class="form-horizontal push-10-t">
+                        <div class="alert alert-danger hide">
+                        </div>
+                        <div class="form-group" id="blockParent">
+                            <div class="col-sm-12">
+                                <div class="form-material">
+                                    <input type="text" class="form-control" id="tbParentName" />
+                                    <input type="hidden" class="form-control" id="hidParentId" value="0" />
+                                    <label>父节点</label>
+                                </div>
+                                <div class="help-block">
+                                    所属的父级目录
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <div class="form-material">
+                                    <input type="text" class="form-control" id="tbName" />
+                                    <label>名称</label>
+                                </div>
+                                <div class="help-block">
+                                    分类的显示名称
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <div class="form-material">
+                                    <select id="ddlNodeTypes" class="form-control">
+                                        <option value="1">通用</option>
+                                        <option value="2">HTML组件</option>
+                                    </select>
+                                    <label>默认类型</label>
+                                </div>
+                                <div class="help-block">
+                                    默认的笔记的上传格式
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" id="blockIcon">
+                            <div class="col-sm-6">
+                                <div class="form-material">
+                                    <input class="form-control" value="si-plus" type="text" name="txtIcon" id="tbIcon">
+                                    <label for="txtIcon">Icon</label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <a href="/icons.html" target="_blank" class="btn btn-default ">其他Icon</a>
+                            </div>
+                            <div class="help-block">
+                                将对应的标识“复制”到输入框。
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <div class="form-material">
+                                    <textarea cols="12" rows="6" class="form-control" id="tbDescription"></textarea>
+                                    <label for="txtUrl">描述</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="form-group" style="display:none">
+                            <div class="col-xs-12">
+                                <div class="form-material">
+                                    <select class="form-control" id="ddlPublic"><option value="0">私有</option><option value="1">公开</option></select>
+                                    <label for="txtOrder">隐私</label>
+                                </div>
+                                <div class="help-block">
+                                    “公开”为别人可以查看及收藏此目录
+                                </div>
+                            </div>
+                        </div>-->
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <div class="form-material">
+                                    <input class="form-control" type="text" name="txtOrder" id="tbOrder">
+                                    <label for="txtOrder">排序</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn  btn-primary" type="button">保存</button>
+                <button class="btn  btn-default" type="button" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>

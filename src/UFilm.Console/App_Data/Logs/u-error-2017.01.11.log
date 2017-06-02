@@ -1,0 +1,8 @@
+2017-01-11 22:28:39,060 [DelayedJobScheduler] Hangfire.AutomaticRetryAttribute - (null) - Failed to process the job '12': an exception occurred.
+ (null)
+System.TypeLoadException: 未能从程序集“UFilm.Console, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null”中加载类型“UFilm.Console.Adults.Spiders.Www.SpiderWwwNH87CNJob”。
+   在 System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMarkHandle stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName, ObjectHandleOnStack type)
+   在 System.RuntimeTypeHandle.GetTypeByName(String name, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean loadTypeFromPartialName)
+   在 System.RuntimeType.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase, Boolean reflectionOnly, StackCrawlMark& stackMark)
+   在 System.Type.GetType(String typeName, Boolean throwOnError, Boolean ignoreCase)
+   在 Hangfire.Storage.InvocationData.Deserialize()

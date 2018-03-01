@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{FFD8EBB1-C9DA-4BFC-9450-5B6E0CCDB8E9}"
 EndProject
@@ -22,6 +22,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UFilm.FE", "UFilm.FE\UFilm.FE.csproj", "{E5E90AD3-30FD-4C56-9CAC-C489B3912D8E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UFilm.AlibWeb", "UFilm.AlibWeb\UFilm.AlibWeb.csproj", "{F89370BB-7332-4088-BD6C-BF779BA390BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UFilm.Services.Spiders", "UFilm.Services.Spiders\UFilm.Services.Spiders.csproj", "{584B524C-8DD6-4B6B-A632-0042B8967A67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UFilm.TestConsole", "UFilm.TestConsole\UFilm.TestConsole.csproj", "{2825F40F-C7BA-40E9-B852-53770F9F99D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +69,14 @@ Global
 		{F89370BB-7332-4088-BD6C-BF779BA390BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F89370BB-7332-4088-BD6C-BF779BA390BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F89370BB-7332-4088-BD6C-BF779BA390BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{584B524C-8DD6-4B6B-A632-0042B8967A67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{584B524C-8DD6-4B6B-A632-0042B8967A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{584B524C-8DD6-4B6B-A632-0042B8967A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{584B524C-8DD6-4B6B-A632-0042B8967A67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2825F40F-C7BA-40E9-B852-53770F9F99D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2825F40F-C7BA-40E9-B852-53770F9F99D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2825F40F-C7BA-40E9-B852-53770F9F99D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2825F40F-C7BA-40E9-B852-53770F9F99D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,5 +86,9 @@ Global
 		{2AD6F8A4-62AB-49EF-AA5B-DEC8C5C5F553} = {FFD8EBB1-C9DA-4BFC-9450-5B6E0CCDB8E9}
 		{6A44FC61-BF8A-421B-B32E-794DFAC3042B} = {FFD8EBB1-C9DA-4BFC-9450-5B6E0CCDB8E9}
 		{85ECB424-7869-4CBD-A45E-8B5116948DCE} = {FFD8EBB1-C9DA-4BFC-9450-5B6E0CCDB8E9}
+		{584B524C-8DD6-4B6B-A632-0042B8967A67} = {FFD8EBB1-C9DA-4BFC-9450-5B6E0CCDB8E9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51D06D50-C961-4F08-96AF-93EE9FF8A9AB}
 	EndGlobalSection
 EndGlobal

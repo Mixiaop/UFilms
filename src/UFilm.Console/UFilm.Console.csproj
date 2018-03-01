@@ -19,6 +19,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -211,6 +213,7 @@
     <Content Include="Adults\Movies\Add.aspx" />
     <Content Include="Adults\Movies\Edit.aspx" />
     <Content Include="Adults\Movies\List.aspx" />
+    <Content Include="Adults\Spiders\Www\Beatricee.aspx" />
     <Content Include="Adults\Spiders\Www\NH87CN.aspx" />
     <Content Include="Adults\Spiders\Www\nh87cn.html" />
     <Content Include="AjaxServices\AdultsService.aspx" />
@@ -2200,6 +2203,13 @@
     <Compile Include="Adults\Movies\List.aspx.designer.cs">
       <DependentUpon>List.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Adults\Spiders\Www\Beatricee.aspx.cs">
+      <DependentUpon>Beatricee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adults\Spiders\Www\Beatricee.aspx.designer.cs">
+      <DependentUpon>Beatricee.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Adults\Spiders\Www\NH87CN.aspx.cs">
       <DependentUpon>NH87CN.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2207,6 +2217,7 @@
     <Compile Include="Adults\Spiders\Www\NH87CN.aspx.designer.cs">
       <DependentUpon>NH87CN.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Adults\Spiders\Www\SpiderBeatriceMovieLinkJob.cs" />
     <Compile Include="Adults\Spiders\Www\SpiderWwwNH87CNJob.cs" />
     <Compile Include="AjaxServices\AdultsService.aspx.cs">
       <DependentUpon>AdultsService.aspx</DependentUpon>

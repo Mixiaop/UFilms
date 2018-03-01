@@ -12,6 +12,6 @@ namespace UFilm.Services.Spiders
 
         event EventHandler<OnErrorEventArgs> OnError;
 
-        Task Start(Uri uri, Script script = null, Operation operation = null);
+        void Start(Uri uri, Script script = null, Operation operation = null);
     }
 }

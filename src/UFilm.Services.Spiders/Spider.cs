@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using UFilm.Services.Spiders.Events;
 
 namespace UFilm.Services.Spiders
@@ -62,43 +63,40 @@ namespace UFilm.Services.Spiders
         /// <param name="script">要执行的Javascript脚本代码</param>
         /// <param name="operation">要执行的页面操作</param>
         /// <returns></returns>
-        public async Task Start(Uri uri, Script script = null, Operation operation = null)
+        public void Start(Uri uri, Script script = null, Operation operation = null)
         {
             if (operation == null)
                 operation = new Operation();
 
-            await Task.Run(() =>
-            {
-                if (OnStart != null) this.OnStart(this, new OnStartEventArgs(uri));
-                var driver = new PhantomJSDriver(_service, _options);//实例化PhantomJS的WebDriver
+            if (OnStart != null) this.OnStart(this, new OnStartEventArgs(uri));
+            var driver = new PhantomJSDriver(_service, _options);//实例化PhantomJS的WebDriver
 
-                try
+            try
+            {
+                var watch = DateTime.Now;
+                driver.Navigate().GoToUrl(uri.ToString());//请求URL地址
+                if (script != null) driver.ExecuteScript(script.Code, script.Args);//执行Javascript代码
+                if (operation.Action != null) operation.Action.Invoke(driver);
+                var driverWait = new WebDriverWait(driver, TimeSpan.FromMilliseconds(operation.Timeout));//设置超时时间为x毫秒
+                if (operation.Condition != null) driverWait.Until(operation.Condition);
+                var threadId = System.Threading.Thread.CurrentThread.ManagedThreadId;//获取当前任务线程ID
+                var milliseconds = DateTime.Now.Subtract(watch).Milliseconds;//获取请求执行时间;
+                var pageSource = driver.PageSource;//获取网页Dom结构
+                if (this.OnCompleted != null)
                 {
-                    var watch = DateTime.Now;
-                    driver.Navigate().GoToUrl(uri.ToString());//请求URL地址
-                    if (script != null) driver.ExecuteScript(script.Code, script.Args);//执行Javascript代码
-                    if (operation.Action != null) operation.Action.Invoke(driver);
-                    var driverWait = new WebDriverWait(driver, TimeSpan.FromMilliseconds(operation.Timeout));//设置超时时间为x毫秒
-                    if (operation.Condition != null) driverWait.Until(operation.Condition);
-                    var threadId = System.Threading.Thread.CurrentThread.ManagedThreadId;//获取当前任务线程ID
-                    var milliseconds = DateTime.Now.Subtract(watch).Milliseconds;//获取请求执行时间;
-                    var pageSource = driver.PageSource;//获取网页Dom结构
-                    if (this.OnCompleted != null)
-                    {
-                        this.OnCompleted.Invoke(this, new OnCompletedEventArgs(uri, threadId, milliseconds, pageSource, driver));
-                    }
+                    this.OnCompleted.Invoke(this, new OnCompletedEventArgs(uri, threadId, milliseconds, pageSource, driver));
                 }
-                catch (Exception ex)
-                {
-                    if (this.OnError != null)
-                        this.OnError.Invoke(this, new OnErrorEventArgs(uri, ex));
-                }
-                finally
-                {
-                    driver.Close();
-                    driver.Quit();
-                }
-            });
+            }
+            catch (Exception ex)
+            {
+                if (this.OnError != null)
+                    this.OnError.Invoke(this, new OnErrorEventArgs(uri, ex));
+            }
+            finally
+            {
+                driver.Close();
+                driver.Quit();
+            }
         }
     }
 }

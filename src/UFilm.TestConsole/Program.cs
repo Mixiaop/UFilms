@@ -288,6 +288,7 @@ namespace UFilm.TestConsole
 
                             spider.Start(new Uri(currentLink));
                             currentComplted = true;
+                            KillSpiderProcess();
                             Console.WriteLine(string.Format("-------------------------------------------- 采集完成", page, index));
                             Console.WriteLine();
                             break;
@@ -341,8 +342,8 @@ namespace UFilm.TestConsole
                     isFirst = false;
                 }
 
-                KillSpiderProcess();
-                Thread.Sleep(1000);
+                
+                Thread.Sleep(2000);
                 SpiderMovie(page, isFirst);
             }
             //}

@@ -158,7 +158,8 @@ namespace UFilm.TestConsole
                                 e.WebDriver.FindElement(By.Id("primary")).FindElement(By.ClassName("btn-identification-4")).Click();
                                 Console.WriteLine("-------------------------------------------- 登录成功");
                             };
-                            spider.OnError += (s, e) => {
+                            spider.OnError += (s, e) =>
+                            {
                                 throwException = true;
                             };
                             spider.OnCompleted += (s, e) =>
@@ -224,9 +225,11 @@ namespace UFilm.TestConsole
                                     #region 保存影人列表
                                     reg = new Regex(@"<ul class=""detailsactorface"">([\s\S]+?)</ul>");
                                     var persons = reg.Matches(pageHtml);
-                                    if (persons.Count > 0) {
+                                    if (persons.Count > 0)
+                                    {
                                         Console.WriteLine("-------------------------------------------- 正在下载影人缩略图");
-                                        foreach (Match m in persons) {
+                                        foreach (Match m in persons)
+                                        {
                                             var aHtml = m.Groups[1].ToString();
                                             var imgUrl = new Regex(@"data-original=""([\s\S]+?)"" alt=").Match(aHtml).Groups[1].ToString();
                                             if (!string.IsNullOrEmpty(imgUrl))
@@ -247,13 +250,16 @@ namespace UFilm.TestConsole
                                     #region 保存影人图片
                                     reg = new Regex(@"<div class=""imagesList"">([\s\S]+?)</div>", regOption);
                                     var imgListHtml = reg.Match(pageHtml);
-                                    if (!string.IsNullOrEmpty(imgListHtml.Groups[1].ToString())) {
+                                    if (!string.IsNullOrEmpty(imgListHtml.Groups[1].ToString()))
+                                    {
                                         reg = new Regex(@"<li>([\s\S]+?)</li>", regOption);
                                         var liList = reg.Matches(imgListHtml.Groups[1].ToString());
-                                        if (liList.Count > 0) {
+                                        if (liList.Count > 0)
+                                        {
                                             Console.WriteLine("-------------------------------------------- 正在下载图片列表");
                                             var imgIndex = 1;
-                                            foreach (Match li in liList) {
+                                            foreach (Match li in liList)
+                                            {
                                                 var imgUrl = new Regex(@"<img src=""([\s\S]+?)"" alt=").Match(li.Groups[1].ToString()).Groups[1].ToString();
                                                 if (!string.IsNullOrEmpty(imgUrl))
                                                 {
@@ -296,50 +302,50 @@ namespace UFilm.TestConsole
                     }
                 }
 
-                if (throwException)
+                //if (throwException)
+                //{
+                //    throw new Exception("出错了");
+                //}
+                //else
+                //{
+                //标记已完成
+                if (currentComplted)
                 {
-                    throw new Exception("出错了");
+                    string text = File.ReadAllText(pageTxtPath);
+                    string result = text.Replace(currentLink, currentLink + "$completed");
+                    File.WriteAllText(pageTxtPath, result);
+                }
+
+                //检查是否全部完成
+                using (StreamReader sr = File.OpenText(pageTxtPath))
+                {
+                    while ((currentLink = sr.ReadLine()) != null)
+                    {
+                        if (!currentLink.Contains("$completed"))
+                        {
+                            allCompleted = false;
+                        }
+                    }
+                }
+
+                if (allCompleted)
+                {
+                    page++;
+                    isFirst = true;
+
+                    Console.WriteLine(string.Format("第 {0} 页都已完成，执行下一页", page));
+                    Console.WriteLine();
                 }
                 else
                 {
-                    //标记已完成
-                    if (currentComplted)
-                    {
-                        string text = File.ReadAllText(pageTxtPath);
-                        string result = text.Replace(currentLink, currentLink + "$completed");
-                        File.WriteAllText(pageTxtPath, result);
-                    }
-
-                    //检查是否全部完成
-                    using (StreamReader sr = File.OpenText(pageTxtPath))
-                    {
-                        while ((currentLink = sr.ReadLine()) != null)
-                        {
-                            if (!currentLink.Contains("$completed"))
-                            {
-                                allCompleted = false;
-                            }
-                        }
-                    }
-
-                    if (allCompleted)
-                    {
-                        page++;
-                        isFirst = true;
-
-                        Console.WriteLine(string.Format("第 {0} 页都已完成，执行下一页", page));
-                        Console.WriteLine();
-                    }
-                    else
-                    {
-                        isFirst = false;
-                    }
-
-                    KillSpiderProcess();
-                    Thread.Sleep(1000);
-                    SpiderMovie(page, isFirst);
+                    isFirst = false;
                 }
+
+                KillSpiderProcess();
+                Thread.Sleep(1000);
+                SpiderMovie(page, isFirst);
             }
+            //}
 
         }
 

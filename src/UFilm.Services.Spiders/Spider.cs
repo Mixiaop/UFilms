@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium.PhantomJS;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.PhantomJS;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Threading.Tasks;
@@ -44,6 +45,7 @@ namespace UFilm.Services.Spiders
             _service.LoadImages = false;//禁止加载图片
             _service.LocalToRemoteUrlAccess = true;//允许使用本地资源响应远程 URL
             _options.AddAdditionalCapability(@"phantomjs.page.settings.userAgent", "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36");
+            
             if (proxy != null)
             {
                 _service.ProxyType = "HTTP";//使用HTTP代理
@@ -68,8 +70,8 @@ namespace UFilm.Services.Spiders
             if (operation == null)
                 operation = new Operation();
 
-            if (OnStart != null) this.OnStart(this, new OnStartEventArgs(uri));
             var driver = new PhantomJSDriver(_service, _options);//实例化PhantomJS的WebDriver
+            if (OnStart != null) this.OnStart(this, new OnStartEventArgs(uri, driver));
 
             try
             {
@@ -80,7 +82,8 @@ namespace UFilm.Services.Spiders
                 var driverWait = new WebDriverWait(driver, TimeSpan.FromMilliseconds(operation.Timeout));//设置超时时间为x毫秒
                 if (operation.Condition != null) driverWait.Until(operation.Condition);
                 var threadId = System.Threading.Thread.CurrentThread.ManagedThreadId;//获取当前任务线程ID
-                var milliseconds = DateTime.Now.Subtract(watch).Milliseconds;//获取请求执行时间;
+                var milliseconds = DateTime.Now.Subtract(watch).Milliseconds;//获取请求执行时间
+
                 var pageSource = driver.PageSource;//获取网页Dom结构
                 if (this.OnCompleted != null)
                 {

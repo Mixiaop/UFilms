@@ -313,6 +313,7 @@ namespace UFilm.TestConsole
 
                 if (throwException)
                 {
+                    Console.WriteLine("-------------------------------------------- 出错了重新来");
                     //出错了重新来
                     SpiderMovie(page, false);
                 }

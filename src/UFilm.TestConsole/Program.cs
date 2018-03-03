@@ -13,7 +13,7 @@ namespace UFilm.TestConsole
 {
     class Program
     {
-        static Settings settings => GetSettings();
+        static Settings settings = GetSettings();
         static void Main(string[] args)
         {
             //link
@@ -150,13 +150,21 @@ namespace UFilm.TestConsole
                             var spider = new Spider();
                             spider.OnStart += (s, e) =>
                             {
-                                //先登录
-                                string loginUrl = "https://www.beatricee.com/usercenter/login.aspx";
-                                e.WebDriver.Navigate().GoToUrl(loginUrl.ToString());
-                                e.WebDriver.FindElement(By.Id("userName")).SendKeys("lisimple@126.com");
-                                e.WebDriver.FindElement(By.Id("userPassword")).SendKeys("123123");
-                                e.WebDriver.FindElement(By.Id("primary")).FindElement(By.ClassName("btn-identification-4")).Click();
-                                Console.WriteLine("-------------------------------------------- 登录成功");
+                                try
+                                {
+                                    //先登录
+                                    string loginUrl = "https://www.beatricee.com/usercenter/login.aspx";
+                                    e.WebDriver.Navigate().GoToUrl(loginUrl.ToString());
+                                    e.WebDriver.FindElement(By.Id("userName")).SendKeys("lisimple@126.com");
+                                    e.WebDriver.FindElement(By.Id("userPassword")).SendKeys("123123");
+                                    e.WebDriver.FindElement(By.Id("primary")).FindElement(By.ClassName("btn-identification-4")).Click();
+                                    Console.WriteLine("-------------------------------------------- 登录成功");
+                                }
+                                catch (Exception ex)
+                                {
+                                    //登录失败
+                                    throwException = true;
+                                }
                             };
                             spider.OnError += (s, e) =>
                             {
@@ -303,50 +311,50 @@ namespace UFilm.TestConsole
                     }
                 }
 
-                //if (throwException)
-                //{
-                //    throw new Exception("出错了");
-                //}
-                //else
-                //{
-                //标记已完成
-                if (currentComplted)
+                if (throwException)
                 {
-                    string text = File.ReadAllText(pageTxtPath);
-                    string result = text.Replace(currentLink, currentLink + "$completed");
-                    File.WriteAllText(pageTxtPath, result);
-                }
-
-                //检查是否全部完成
-                using (StreamReader sr = File.OpenText(pageTxtPath))
-                {
-                    while ((currentLink = sr.ReadLine()) != null)
-                    {
-                        if (!currentLink.Contains("$completed"))
-                        {
-                            allCompleted = false;
-                        }
-                    }
-                }
-
-                if (allCompleted)
-                {
-                    page++;
-                    isFirst = true;
-
-                    Console.WriteLine(string.Format("第 {0} 页都已完成，执行下一页", page));
-                    Console.WriteLine();
+                    //出错了重新来
+                    SpiderMovie(page, false);
                 }
                 else
                 {
-                    isFirst = false;
-                }
+                    //标记已完成
+                    if (currentComplted)
+                    {
+                        string text = File.ReadAllText(pageTxtPath);
+                        string result = text.Replace(currentLink, currentLink + "$completed");
+                        File.WriteAllText(pageTxtPath, result);
+                    }
 
-                
-                Thread.Sleep(2000);
-                SpiderMovie(page, isFirst);
+                    //检查是否全部完成
+                    using (StreamReader sr = File.OpenText(pageTxtPath))
+                    {
+                        while ((currentLink = sr.ReadLine()) != null)
+                        {
+                            if (!currentLink.Contains("$completed"))
+                            {
+                                allCompleted = false;
+                            }
+                        }
+                    }
+
+                    if (allCompleted)
+                    {
+                        Console.WriteLine(string.Format("第 {0} 页都已完成，执行下一页", page));
+                        Console.WriteLine();
+                        isFirst = true;
+                        page++;
+                    }
+                    else
+                    {
+                        isFirst = false;
+                    }
+
+
+                    Thread.Sleep(2000);
+                    SpiderMovie(page, isFirst);
+                }
             }
-            //}
 
         }
 

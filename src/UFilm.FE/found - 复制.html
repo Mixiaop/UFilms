@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>面包卷，卷出你的电影态度~</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0" />
+
+    <link rel="shortcut icon" href="/img/favicons/favicon.png" />
+    <link rel="icon" type="image/png" href="/img/favicons/favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon-180x180.png" />
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/oneui.css" />
+    <link rel="stylesheet" href="/css/ufilm.css" />
+    <link rel="stylesheet" href="/css/views/movies/subject.css" />
+
+    <script src="/lib/core/require.js"></script>
+    <script src="/js/app.init.js"></script>
+
+</head>
+<body>
+
+    <!-- pc 导航-->
+    <div class="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4 col-lg-2 logo">
+                    <a href="/" title="首页"><i>M</i>Bjuan</a>
+                </div>
+                <div class="hidden-xs col-lg-6 menu">
+                    <ul>
+                        <li><a href="http://www.mbjuan.com/find" title="找电影">发<span>现</span></a></li>
+
+                        <li><a href="http://www.mbjuan.com/collection/1" title="奥斯卡">奥<span>斯卡</span></a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-8 col-lg-4 searchbar" id="topSearchbar">
+                    <input type="hidden" value="http://www.mbjuan.com/search?wd={0}&amp;p={1}">
+                    <div class="form-horizontal">
+                        <div class="input-group remove-margin-t remove-margin-b">
+                            <input class="form-control" type="text" placeholder="电影、影人" value="">
+                            <span class="input-group-addon"><i class="si si-magnifier"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--mobile 导航-->
+    <div class="nav-mb">
+        <div class="col-xs-3 menu ">
+            <div class="menu-btn">
+                <div class="menu-item top">
+                    <div class="line"></div>
+                </div>
+                <div class="menu-item middle">
+                    <div class="line"></div>
+                </div>
+                <div class="menu-item bottom">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 logo">
+            <a href="/" title="首页"><i>M</i>BJUAN</a>
+        </div>
+        <div class="col-xs-3 search">
+            <i class="si si-magnifier"></i>
+        </div>
+
+        <div class="search-wrap">
+            <div class="search-box">
+                <div class="btn-close"></div>
+                <input type="text" placeholder="电影、影人" />
+                <button type="button"><i class="si si-magnifier"></i></button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="nav-panel-wrap">
+        <div class="nav-panel">
+            <ul>
+                <li class="logo">
+                    <span class="pull-right">
+                        <div class="btn-close"></div>
+                    </span>
+                    <a href="/" title="首页"><i>M</i>BJUAN</a>
+                </li>
+                <li><a href="###">最新源</a></li>
+                <li><a href="###">发现</a></li>
+                <li><a href="###">奥斯卡</a></li>
+            </ul>
+        </div>
+        <div class="nav-panel-bg"></div>
+    </div>
+
+
+
+    <!--内容-->
+    <div class="wrapper found-list">
+
+
+        <div class="cdi-wrap col3">
+            <div class="col">
+                地区 <i class="si si-arrow-down"></i>
+            </div>
+            <div class="col">
+                类型 <i class="si si-arrow-down"></i>
+            </div>
+            <div class="col">
+                年份 <i class="si si-arrow-down"></i>
+            </div>
+                
+        </div>
+
+
+        <!--PC筛选条件-->
+        <div class="container">
+            <div class="cdi-wrap">
+                <div class="col-xs-12">
+                    <div class="row cdi-box">
+                        <label>类型：</label>
+                        <ul>
+                            <li><a href="###">全部</a></li>
+                            <li class="current"><a href="###">恐怖</a></li>
+                            <li><a href="###">惊悚</a></li>
+                            <li><a href="###">爱情</a></li>
+                            <li><a href="###">搞笑</a></li>
+                            <li><a href="###">黑色</a></li>
+                            <li><a href="###">喜剧</a></li>
+                            <li><a href="###">剧情</a></li>
+                            <li><a href="###">悬疑</a></li>
+                            <li><a href="###">血腥</a></li>
+                            <li><a href="###">武侠</a></li>
+                            <li><a href="###">儿童</a></li>
+                            <li><a href="###">古装</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="row cdi-box">
+                        <label>地区：</label>
+                        <ul>
+                            <li><a href="###">全部</a></li>
+                            <li class="current"><a href="###">美国</a></li>
+                            <li><a href="###">日本</a></li>
+                            <li><a href="###">英国</a></li>
+                            <li><a href="###">中国</a></li>
+                            <li><a href="###">韩国</a></li>
+                            <li><a href="###">泰国</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="row cdi-box">
+                        <label>年份：</label>
+                        <ul>
+                            <li><a href="###">全部</a></li>
+                            <li><a href="###">最新</a></li>
+                            <li class="current"><a href="###">2016</a></li>
+                            <li><a href="###">2015</a></li>
+                            <li><a href="###">2014</a></li>
+                            <li><a href="###">2013</a></li>
+                            <li><a href="###">2012</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <!--mobile筛选条件-->
+        <div class="cdi-mobile-wrap">
+            <div class="cdi-mobile">
+                <i class="fa fa-filter"></i>
+                <div class="sel-box s1" data-id="1">类型</div>
+                <div class="sel-box s2" data-id="2">地区</div>
+                <div class="sel-box s3" data-id="3">年份</div>
+                <div class="quite">
+                </div>
+            </div>
+            <div class="cdi-mobile-animation"></div>
+        </div>
+
+        <div class="cdi-mobile-con-wrap">
+            <div class="cdi-mobile-con">
+                <h6>类型</h6>
+                <ul>
+                    <li><a href="###">全部</a></li>
+                    <li class="current"><a href="###">恐怖</a></li>
+                    <li><a href="###">惊悚</a></li>
+                    <li><a href="###">爱情</a></li>
+                    <li><a href="###">搞笑</a></li>
+                    <li><a href="###">黑色</a></li>
+                    <li><a href="###">喜剧</a></li>
+                    <li><a href="###">剧情</a></li>
+                    <li><a href="###">悬疑</a></li>
+                    <li><a href="###">血腥</a></li>
+                    <li><a href="###">武侠</a></li>
+                    <li><a href="###">儿童</a></li>
+                    <li><a href="###">古装</a></li>
+                </ul>
+            </div>
+            <div class="cdi-mobile-bg"></div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="1">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00157815.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>变形金刚领袖之证野兽猎人:巨狰狞之崛起<span>Transformers Prime Beast Hunters: Predacons Rising (2016)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="2">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00174202.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>迫切的任务<span>True Crime  (1999)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="3">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00157815.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>苍白骑士<span>Pale Rider (1985)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="4">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00175473.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>唐伯虎点秋香<span>唐伯虎点秋香 (1993)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="5">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00174748.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>冰雪奇缘：生日惊喜<span>Frozen Fever  (2015)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="6">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00157815.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>冰雪奇缘：生日惊喜<span>Frozen Fever  (2015)</span></h4>
+                </div>
+                <div class="clearfix"></div>
+
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="1">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00157815.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>冰雪奇缘：生日惊喜<span>Frozen Fever  (2015)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="2">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00174202.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>迫切的任务<span>True Crime  (1999)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="3">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00157815.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>苍白骑士<span>Pale Rider (1985)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="4">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00175473.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>唐伯虎点秋香<span>唐伯虎点秋香 (1993)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="5">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00174748.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>冰雪奇缘：生日惊喜<span>Frozen Fever  (2015)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="6">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00157815.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>变形金刚领袖之证野兽猎人:巨狰狞之崛起<span>Transformers Prime Beast Hunters: Predacons Rising (2016)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="1">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00157815.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>变形金刚领袖之证野兽猎人:巨狰狞之崛起<span>Transformers Prime Beast Hunters: Predacons Rising (2016)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="2">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00174202.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>迫切的任务<span>True Crime  (1999)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="3">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00157815.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>苍白骑士<span>Pale Rider (1985)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="4">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00175473.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>唐伯虎点秋香<span>唐伯虎点秋香 (1993)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="5">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00174748.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>冰雪奇缘：生日惊喜<span>Frozen Fever  (2015)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="6">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00157815.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>变形金刚领袖之证野兽猎人:巨狰狞之崛起<span>Transformers Prime Beast Hunters: Predacons Rising (2016)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="1">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00157815.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>变形金刚领袖之证野兽猎人:巨狰狞之崛起<span>Transformers Prime Beast Hunters: Predacons Rising (2016)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="2">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00174202.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>迫切的任务<span>True Crime  (1999)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="3">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00157815.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>苍白骑士<span>Pale Rider (1985)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="4">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00175473.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>唐伯虎点秋香<span>唐伯虎点秋香 (1993)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="5">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00174748.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>冰雪奇缘：生日惊喜<span>Frozen Fever  (2015)</span></h4>
+                </div>
+                <div class="col-lg-2 col-xs-6 found-list-box" data-id="6">
+                    <div class="zoom"><i class="si si-magnifier-add"></i></div>
+                    <a href="###">
+                        <img src="http://img.mbjuan.com/content/media/thumbs/p00157815.jpeg" class="img-responsive" data-id="1" /></a>
+                    <h4>变形金刚领袖之证野兽猎人:巨狰狞之崛起<span>Transformers Prime Beast Hunters: Predacons Rising (2016)</span></h4>
+                </div>
+
+            </div>
+        </div>
+
+        <!--通用浮框-->
+        <div class="info-window-wrap">
+            <div class="info-window">
+                <div class="box">
+                    <div class="triangle"></div>
+                    <h3><a href="###">维多利亚的秘密2014时装秀 The Victoria's Secret Fashion Show  <span>(2014)</span></a></h3>
+                    <ul>
+                        <li><span>类型：</span> 剧情 <em>/</em> 动作 <em>/</em> 犯罪</li>
+                        <li><span>制片国家/地区：</span> 美国</li>
+                        <li><span>演员 actor：</span>艾米莉·布朗特 <em>/</em> 本尼西奥·德尔·托罗 <em>/</em> 乔什·布洛林 <em>/</em> 维克多·加博 </li>
+                    </ul>
+                    <div class="intro">
+                        在美国与墨西哥的边界有一块灰色地带，那里是毒贩和杀手们的天堂，他们在此交易火并，完全视法律为无物。凯特（艾米莉·布朗特 Emily Blunt 饰）是联邦调查局的探员，心里怀揣着惩奸除恶的正义理想，她来到此地，加入了联邦政府特种部队，成为了马特（乔什·布洛林 Josh Brolin 饰）的部下。 在美国与墨西哥的边界有一块灰色地带，那里是毒贩和杀手们的天堂，他们在此交易火并，完全视法律为无物。凯特（艾米莉·布朗特 Emily Blunt 饰）是联邦调查局的探员，心里怀揣着惩奸除恶的正义理想，她来到此地，加入了联邦政府特种部队，成为了马特（乔什·布洛林 Josh Brolin 饰）的部下。 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="page-box">
+            <a class="arrow-btn pre " href="###">
+                <div class="l lt"></div>
+                <div class="l lb"></div>
+                上一页
+            </a>
+            <a class="arrow-btn next" href="###">
+                <div class="l lt"></div>
+                <div class="l lb"></div>
+                下一页
+            </a>
+        </div>
+
+    </div>
+
+    <script>
+        require(['jquery', 'bootstrap'], function ($) {
+
+            //mobile 菜单
+            $('.menu').on('click', function () {
+                $('body').addClass('open');
+            })
+
+            $('.nav-panel-bg').on('click', function () {
+                $('body').removeClass('open');
+            })
+            $('.nav-panel-wrap .btn-close').on('click', function () {
+                $('body').removeClass('open');
+            })
+
+            //mobile 搜索
+            $('.nav-mb .search').on('click', function () {
+                $('.search-wrap').addClass('active');
+            })
+            $('.nav-mb .btn-close').on('click', function () {
+                $('.search-wrap').removeClass('active');
+            })
+
+            //移动版筛选条件
+            $('.cdi-mobile-wrap').on('click', function () {
+                $('.cdi-mobile-con-wrap').addClass('active');
+                $('.cdi-mobile').addClass('active');
+            })
+
+            $('.cdi-mobile-bg').on('click', function () {
+                $('.cdi-mobile-con-wrap').removeClass('active');
+                $('.cdi-mobile').removeClass('active');
+            })
+
+            $('.cdi-mobile .quite').on('click', function () {
+                $('.cdi-mobile-con-wrap').removeClass('active');
+                $('.cdi-mobile').removeClass('active');
+            })
+
+            $('.cdi-mobile-wrap .sel-box').on('click', function () {
+                var $id = $(this).data('id');
+                if ($id == 1) {
+                    var data = ['美国1', '美国2', '美国3', '美国4', '美国5'];
+                } else if ($id == 2) {
+                    var data = ['英国1', '英国2', '英国3', '英国4', '英国5'];
+                } else {
+                    var data = ['中国1', '中国2', '中国3', '中国4', '中国5'];
+                }
+                $('.cdi-mobile-con ul').empty();
+                for (i = 0; i <= data.length; i++) {
+                    $('.cdi-mobile-con ul').append('<li>' + data[0] + '</li>')
+                }
+            })
+
+            //列表
+            $('.found-list-box img').on('mouseenter', function () {
+                var selfWidth = $(this).width();
+                var leftWidth = $(this).offset().left;
+                var topHeight = $(this).offset().top - $("body").scrollTop();
+
+                if (leftWidth < 360) {
+                    $('.info-window-wrap').removeClass('left');
+                    $('.info-window-wrap').addClass('right');
+                    $('.info-window-wrap').css('left', leftWidth + selfWidth - 20);
+                } else {
+                    $('.info-window-wrap').removeClass('right');
+                    $('.info-window-wrap').addClass('left');
+                    $('.info-window-wrap').css('left', leftWidth - 335);
+                }
+                $('.info-window-wrap').css('top', topHeight);
+                $('.info-window-wrap').addClass('active');
+            })
+
+            $('.found-list-box img').on('mouseleave', function () {
+                $('.info-window-wrap').removeClass('active');
+            })
+
+            $('.info-window-wrap').on('mouseenter', function () {
+                $(this).addClass('active');
+            })
+            $('.info-window-wrap').on('mouseleave', function () {
+                $(this).removeClass('active');
+            })
+
+        });
+    </script>
+
+
+
+</body>
+</html>

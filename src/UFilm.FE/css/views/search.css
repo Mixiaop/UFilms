@@ -1,0 +1,16 @@
+﻿.page-search{margin-top:80px;}
+.page-search .list{border-bottom:1px dashed #ddd;padding-bottom:20px;margin-bottom:20px;}
+    .page-search .list .pic {
+        text-align:left;padding:0;
+    }
+.page-search .list img{max-width:166px;}
+.page-search .list .info {}
+.page-search .list .info h2{font-size:1.6rem;margin-bottom:.2rem;margin-bottom:10px;}
+.page-search .list .info h2 a{font-size:1.6rem;color:#444;}
+.page-search .list .info h3{line-height:160%;}
+.page-search .list .info h3 span{color:#999;}
+.page-search .list .info h3 span.ml10{margin-left:10px;}
+    .page-search .list p {
+        color:#999;
+        margin-top:5px;
+    }

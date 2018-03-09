@@ -1,0 +1,73 @@
+﻿#page-subject {
+    margin-top:80px;
+}
+
+#movie-title {font-size: 26px; color: #494949; font-weight: bold; line-height: 28px;}
+#movie-title span { color: #777; }
+#movie-title .btn{font-weight:normal;}
+
+#movie-photos{width:100%;padding-top:19px;padding-bottom:19px;position:relative;}
+#movie-photos>a.img{display:block;width:100px;height:100px;float:left;margin-left:17px;}
+#movie-photos>a.img:last-child{margin-right:0;}
+#movie-photos>a.img img{width:100px;height:100px;}
+#movie-photos>a.img:hover img{}
+#movie-photos>a>img{width:100px;height:100px;}
+#moreMoviePhotos{position:absolute;right:-49px;top:45px;width:48px;height:48px;background:url(/images/assets/more-photo.png) no-repeat;}
+
+#movie-info {height:auto;padding:30px 0 19px 0;}
+#movie-info .img {}
+#movie-info .img:hover{}
+#movie-info .img img{max-width:169px;}
+#movie-info  ul { color:#000;width:100%;}
+#movie-info  ul > li { margin-bottom:5px; }
+#movie-info  ul > li > span { color: #999; }
+#movie-info .action{padding-top:20px;}
+#movie-info .action .btn-group{font-family:arial;}
+    #movie-info .series a{
+        font-weight:normal;
+    }
+    #movie-info .series > a {
+        background:none;
+        border:1px dashed #555;
+    }
+#movie-info i{margin-top:0px;}
+#movie-summary {width:100%;padding:0;height: auto;padding-top:26px;}
+#movie-summary > .title {font-size: 15px; color:#999;padding-bottom:10px;}
+#movie-summary > .text {line-height:22px;}
+
+#movie-mans {height: auto;margin-top:30px;padding-top:15px;padding-bottom:19px;border-top:1px dashed #ddd;}
+#movie-mans > .title { font-size: 15px;  color:#999;}
+#movie-mans > .list { padding: 5px 0 15px 0;color: #999;}
+
+#torrents {height: auto;position:relative;margin-top:30px;padding-top:15px;border-top: 1px dashed #ddd; }
+#torrents .title {font-size: 15px; color:#999;}
+#torrents > ul { padding: 10px 0 10px 0;}
+#torrents > ul > li { color: #000; padding-bottom:5px; }
+#torrents > ul > li span{color:#aaa;}
+#torrents > ul > li a.user { padding: 4px 4px; text-align: center;font-family:Arial;}
+#torrents > ul > li a.user:hover{background:#00A1DF;color:#fff;}
+    #torrents > ul > li > i {
+        color:#999;
+    }
+
+
+#photo-title {
+    color:#999;
+    padding:10px 15px 15px 15px;
+    font-size:15px;
+}
+
+#photos .pitem {
+    padding:0;
+    overflow:hidden;
+}
+
+    #photos .pitem a {
+        display:block;
+        width:100%;
+    }
+    #photos .pitem img {
+        margin:0;
+        padding:0;
+
+    }

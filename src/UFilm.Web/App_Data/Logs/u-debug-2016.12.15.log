@@ -1,0 +1,57 @@
+2016-12-15 11:35:25,815 [1] U.Logging.ULog4netLogger - (null) - Loading UPrimes...
+2016-12-15 11:35:26,129 [1] U.Logging.ULog4netLogger - (null) - Found 14 UPrimes in total.
+2016-12-15 11:35:26,137 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UFilm.EntityFramework.UFilmEntityFrameworkUPrime, UFilm.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 11:35:26,138 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: U.EntityFramework.UEntityFrameworkUPrime, U.EntityFramework, Version=0.4.1.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 11:35:26,139 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UFilm.Web.UFilmWebUPrime, UFilm.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 11:35:26,140 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UFilm.Web.UFilmWebUPrime, UFilm.Web.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 11:35:26,141 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: U.Web.UWebUPrime, U.Web, Version=0.2.1.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 11:35:26,142 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: U.WebApi.UWebApiUPrime, U.Web.Api, Version=0.2.1.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 11:35:26,142 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UFilm.Services.UFilmServicesUPrime, UFilm.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 11:35:26,143 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: U.FakeMvc.UFakeMvcUPrime, U.FakeMvc, Version=0.4.1.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 11:35:26,143 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UZeroMedia.Client.UZeroMediaClientUPrime, UZeroMedia.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 11:35:26,144 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UFilm.UFilmCoreUPrime, UFilm.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 11:35:26,145 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UZeroMedia.UZeroMediaUPrime, UZeroMedia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 11:35:26,145 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UFilm.Configuration.UFilmConfigurationUPrime, UFilm.Configuration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 11:35:26,146 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: U.AutoMapper.UAutoMapperUPrime, U.AutoMapper, Version=0.4.1.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 11:35:26,147 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: U.ULeadershipUPrime, U, Version=0.4.1.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 11:35:26,150 [1] U.Logging.ULog4netLogger - (null) - 14 UPrime loaded.
+2016-12-15 11:35:26,700 [1] U.Logging.ULog4netLogger - (null) - Found 0 classes defines auto mapping attributes
+2016-12-15 11:35:26,700 [1] U.Logging.ULog4netLogger - (null) - (^_^)(^_^)(^_^) UStarter startup completed.
+2016-12-15 16:20:41,410 [591] U.Logging.ULog4netLogger - (null) - Loading UPrimes...
+2016-12-15 16:20:41,705 [591] U.Logging.ULog4netLogger - (null) - Found 14 UPrimes in total.
+2016-12-15 16:20:41,711 [591] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UZeroMedia.UZeroMediaUPrime, UZeroMedia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:20:41,711 [591] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UFilm.Configuration.UFilmConfigurationUPrime, UFilm.Configuration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:20:41,712 [591] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UFilm.Services.UFilmServicesUPrime, UFilm.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:20:41,713 [591] U.Logging.ULog4netLogger - (null) - Loaded UPrime: U.EntityFramework.UEntityFrameworkUPrime, U.EntityFramework, Version=0.4.1.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:20:41,714 [591] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UFilm.Web.UFilmWebUPrime, UFilm.Web.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:20:41,714 [591] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UFilm.Web.UFilmWebUPrime, UFilm.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:20:41,715 [591] U.Logging.ULog4netLogger - (null) - Loaded UPrime: U.ULeadershipUPrime, U, Version=0.4.1.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:20:41,715 [591] U.Logging.ULog4netLogger - (null) - Loaded UPrime: U.FakeMvc.UFakeMvcUPrime, U.FakeMvc, Version=0.4.1.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:20:41,716 [591] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UZeroMedia.Client.UZeroMediaClientUPrime, UZeroMedia.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:20:41,717 [591] U.Logging.ULog4netLogger - (null) - Loaded UPrime: U.AutoMapper.UAutoMapperUPrime, U.AutoMapper, Version=0.4.1.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:20:41,717 [591] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UFilm.UFilmCoreUPrime, UFilm.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:20:41,718 [591] U.Logging.ULog4netLogger - (null) - Loaded UPrime: U.WebApi.UWebApiUPrime, U.Web.Api, Version=0.2.1.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:20:41,718 [591] U.Logging.ULog4netLogger - (null) - Loaded UPrime: U.Web.UWebUPrime, U.Web, Version=0.2.1.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:20:41,719 [591] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UFilm.EntityFramework.UFilmEntityFrameworkUPrime, UFilm.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:20:41,722 [591] U.Logging.ULog4netLogger - (null) - 14 UPrime loaded.
+2016-12-15 16:20:42,237 [591] U.Logging.ULog4netLogger - (null) - Found 0 classes defines auto mapping attributes
+2016-12-15 16:20:42,237 [591] U.Logging.ULog4netLogger - (null) - (^_^)(^_^)(^_^) UStarter startup completed.
+2016-12-15 16:21:00,157 [1] U.Logging.ULog4netLogger - (null) - Loading UPrimes...
+2016-12-15 16:21:00,467 [1] U.Logging.ULog4netLogger - (null) - Found 14 UPrimes in total.
+2016-12-15 16:21:00,472 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UFilm.Web.UFilmWebUPrime, UFilm.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:21:00,473 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: U.ULeadershipUPrime, U, Version=0.4.1.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:21:00,473 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UFilm.Services.UFilmServicesUPrime, UFilm.Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:21:00,474 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UFilm.Configuration.UFilmConfigurationUPrime, UFilm.Configuration, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:21:00,474 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UFilm.EntityFramework.UFilmEntityFrameworkUPrime, UFilm.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:21:00,475 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: U.WebApi.UWebApiUPrime, U.Web.Api, Version=0.2.1.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:21:00,476 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UZeroMedia.Client.UZeroMediaClientUPrime, UZeroMedia.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:21:00,476 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UZeroMedia.UZeroMediaUPrime, UZeroMedia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:21:00,477 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: U.Web.UWebUPrime, U.Web, Version=0.2.1.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:21:00,477 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: U.AutoMapper.UAutoMapperUPrime, U.AutoMapper, Version=0.4.1.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:21:00,478 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UFilm.UFilmCoreUPrime, UFilm.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:21:00,478 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: U.FakeMvc.UFakeMvcUPrime, U.FakeMvc, Version=0.4.1.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:21:00,479 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: UFilm.Web.UFilmWebUPrime, UFilm.Web.Framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:21:00,479 [1] U.Logging.ULog4netLogger - (null) - Loaded UPrime: U.EntityFramework.UEntityFrameworkUPrime, U.EntityFramework, Version=0.4.1.0, Culture=neutral, PublicKeyToken=null
+2016-12-15 16:21:00,482 [1] U.Logging.ULog4netLogger - (null) - 14 UPrime loaded.
+2016-12-15 16:21:01,052 [1] U.Logging.ULog4netLogger - (null) - Found 0 classes defines auto mapping attributes
+2016-12-15 16:21:01,053 [1] U.Logging.ULog4netLogger - (null) - (^_^)(^_^)(^_^) UStarter startup completed.

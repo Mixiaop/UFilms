@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Head.master.cs" Inherits="UFilm.AlibWeb.Masters.Head" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title><%= PageAttr.PageTitle %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0" />
+    <meta name="keywords" content="<%= PageAttr.SeoMetaKeywords %>" />
+    <meta name="description" content="<%= PageAttr.SeoMetaDescription %>" />
+    <link rel="shortcut icon" href="/img/favicons/favicon.png" />
+    <link rel="icon" type="image/png" href="/img/favicons/favicon-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon-180x180.png" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/oneui.css" />
+    <link rel="stylesheet" href="/css/ufilm.css" />
+    <link rel="stylesheet" href="/css/ufilm-views.css" />
+    <asp:ContentPlaceHolder ID="headCss" runat="server"></asp:ContentPlaceHolder>
+    <script src="/lib/core/require.js"></script>
+    <script src="/js/app.init.js"></script>
+    <script src="/js/ajaxservices.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <asp:ContentPlaceHolder ID="body" runat="server"></asp:ContentPlaceHolder>
+    <script src="/js/controllers/global.js"></script>
+    <div id="footer">
+        <div class="container text-center text-gray ">
+            &copy;2016 面包卷 
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="foot" runat="server"></asp:ContentPlaceHolder>
+    <!-- BackToTop-->
+    <div id="back-to-top">
+        <div class="inner"><a href="javascript:;" title="返回顶部" class="front block"></a><a href="javascript:;" title="返回顶部" class="back block"></a><a href="javascript:;" title="返回顶部" class="r block"></a><a href="javascript:;" title="返回顶部" class="l block"></a><a href="javascript:;" title="返回顶部" class="t block"></a><a href="javascript:;" title="返回顶部" class="b block"></a></div>
+    </div>
+    <!-- baidu -->
+    <div class="hidden">
+        <script>
+            var _hmt = _hmt || [];
+            (function () {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?c030955bd5f77a99f55f3ecddc47676d";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+    </div>
+    <script>
+        (function () {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            }
+            else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+</script>
+</body>

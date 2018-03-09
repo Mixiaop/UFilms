@@ -1,0 +1,114 @@
+2017-01-17 11:24:38,746 [Worker #c0a61333] Hangfire.Server.Worker - (null) - Error occurred during execution of 'Worker #c0a61333' process. Execution will be retried (attempt 4 of 2147483647) in 00:00:14 seconds.
+ (null)
+System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: TCP Provider, error: 0 - 不能访问网络位置。有关网络排除故障的信息，请参阅 Windows 帮助。) ---> System.ComponentModel.Win32Exception (0x80004005): 不能访问网络位置。有关网络排除故障的信息，请参阅 Windows 帮助。
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   在 Hangfire.SqlServer.SqlServerJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+   在 Hangfire.SqlServer.SqlServerConnection.FetchNextJob(String[] queues, CancellationToken cancellationToken)
+   在 Hangfire.Server.Worker.Execute(BackgroundProcessContext context)
+   在 Hangfire.Server.ServerProcessExtensions.Execute(IServerProcess process, BackgroundProcessContext context)
+   在 Hangfire.Server.AutomaticRetryProcess.Execute(BackgroundProcessContext context)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:1232,State:0,Class:20
+2017-01-17 11:24:38,746 [Worker #7eeb5ee4] Hangfire.Server.Worker - (null) - Error occurred during execution of 'Worker #7eeb5ee4' process. Execution will be retried (attempt 4 of 2147483647) in 00:00:15 seconds.
+ (null)
+System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: TCP Provider, error: 0 - 不能访问网络位置。有关网络排除故障的信息，请参阅 Windows 帮助。) ---> System.ComponentModel.Win32Exception (0x80004005): 不能访问网络位置。有关网络排除故障的信息，请参阅 Windows 帮助。
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   在 Hangfire.SqlServer.SqlServerJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+   在 Hangfire.SqlServer.SqlServerConnection.FetchNextJob(String[] queues, CancellationToken cancellationToken)
+   在 Hangfire.Server.Worker.Execute(BackgroundProcessContext context)
+   在 Hangfire.Server.ServerProcessExtensions.Execute(IServerProcess process, BackgroundProcessContext context)
+   在 Hangfire.Server.AutomaticRetryProcess.Execute(BackgroundProcessContext context)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:1232,State:0,Class:20
+2017-01-17 11:24:38,747 [Worker #eebe8275] Hangfire.Server.Worker - (null) - Error occurred during execution of 'Worker #eebe8275' process. Execution will be retried (attempt 4 of 2147483647) in 00:00:10 seconds.
+ (null)
+System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: TCP Provider, error: 0 - 不能访问网络位置。有关网络排除故障的信息，请参阅 Windows 帮助。) ---> System.ComponentModel.Win32Exception (0x80004005): 不能访问网络位置。有关网络排除故障的信息，请参阅 Windows 帮助。
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   在 Hangfire.SqlServer.SqlServerJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+   在 Hangfire.SqlServer.SqlServerConnection.FetchNextJob(String[] queues, CancellationToken cancellationToken)
+   在 Hangfire.Server.Worker.Execute(BackgroundProcessContext context)
+   在 Hangfire.Server.ServerProcessExtensions.Execute(IServerProcess process, BackgroundProcessContext context)
+   在 Hangfire.Server.AutomaticRetryProcess.Execute(BackgroundProcessContext context)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:1232,State:0,Class:20
+2017-01-17 11:24:38,755 [Worker #2b528b14] Hangfire.Server.Worker - (null) - Error occurred during execution of 'Worker #2b528b14' process. Execution will be retried (attempt 4 of 2147483647) in 00:00:10 seconds.
+ (null)
+System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: TCP Provider, error: 0 - 不能访问网络位置。有关网络排除故障的信息，请参阅 Windows 帮助。) ---> System.ComponentModel.Win32Exception (0x80004005): 不能访问网络位置。有关网络排除故障的信息，请参阅 Windows 帮助。
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   在 Hangfire.SqlServer.SqlServerJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+   在 Hangfire.SqlServer.SqlServerConnection.FetchNextJob(String[] queues, CancellationToken cancellationToken)
+   在 Hangfire.Server.Worker.Execute(BackgroundProcessContext context)
+   在 Hangfire.Server.ServerProcessExtensions.Execute(IServerProcess process, BackgroundProcessContext context)
+   在 Hangfire.Server.AutomaticRetryProcess.Execute(BackgroundProcessContext context)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:1232,State:0,Class:20
+2017-01-17 11:24:38,757 [Worker #cdb8f686] Hangfire.Server.Worker - (null) - Error occurred during execution of 'Worker #cdb8f686' process. Execution will be retried (attempt 4 of 2147483647) in 00:00:14 seconds.
+ (null)
+System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: TCP Provider, error: 0 - 不能访问网络位置。有关网络排除故障的信息，请参阅 Windows 帮助。) ---> System.ComponentModel.Win32Exception (0x80004005): 不能访问网络位置。有关网络排除故障的信息，请参阅 Windows 帮助。
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   在 Hangfire.SqlServer.SqlServerJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+   在 Hangfire.SqlServer.SqlServerConnection.FetchNextJob(String[] queues, CancellationToken cancellationToken)
+   在 Hangfire.Server.Worker.Execute(BackgroundProcessContext context)
+   在 Hangfire.Server.ServerProcessExtensions.Execute(IServerProcess process, BackgroundProcessContext context)
+   在 Hangfire.Server.AutomaticRetryProcess.Execute(BackgroundProcessContext context)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:1232,State:0,Class:20
+2017-01-17 11:24:38,759 [Worker #fda40da3] Hangfire.Server.Worker - (null) - Error occurred during execution of 'Worker #fda40da3' process. Execution will be retried (attempt 4 of 2147483647) in 00:00:14 seconds.
+ (null)
+System.Data.SqlClient.SqlException (0x80131904): 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: TCP Provider, error: 0 - 不能访问网络位置。有关网络排除故障的信息，请参阅 Windows 帮助。) ---> System.ComponentModel.Win32Exception (0x80004005): 不能访问网络位置。有关网络排除故障的信息，请参阅 Windows 帮助。
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   在 Hangfire.SqlServer.SqlServerJobQueue.Dequeue(String[] queues, CancellationToken cancellationToken)
+   在 Hangfire.SqlServer.SqlServerConnection.FetchNextJob(String[] queues, CancellationToken cancellationToken)
+   在 Hangfire.Server.Worker.Execute(BackgroundProcessContext context)
+   在 Hangfire.Server.ServerProcessExtensions.Execute(IServerProcess process, BackgroundProcessContext context)
+   在 Hangfire.Server.AutomaticRetryProcess.Execute(BackgroundProcessContext context)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:1232,State:0,Class:20

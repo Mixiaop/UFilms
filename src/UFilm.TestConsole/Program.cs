@@ -299,6 +299,7 @@ namespace UFilm.TestConsole
                             KillSpiderProcess();
                             Console.WriteLine(string.Format("-------------------------------------------- 采集完成", page, index));
                             Console.WriteLine();
+                            Thread.Sleep(2000);
                             break;
                             #endregion
                         }
@@ -314,7 +315,14 @@ namespace UFilm.TestConsole
                 if (throwException)
                 {
                     Console.WriteLine("-------------------------------------------- 出错了重新来");
-                    //出错了重新来
+                    //标记已完成
+                    if (currentComplted)
+                    {
+                        string text = File.ReadAllText(pageTxtPath);
+                        string result = text.Replace(currentLink, currentLink + "$completed");
+                        File.WriteAllText(pageTxtPath, result);
+                    }
+                    //下一条
                     SpiderMovie(page, false);
                 }
                 else
